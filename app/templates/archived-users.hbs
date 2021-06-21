@@ -1,9 +1,9 @@
-{{page-title 'User'}}
+{{page-title "ArchivedUsers"}}
 <div class="container">
   <div class="columns is-centered">
 
     {{#each @model as |user|}}
-    {{#unless user.value}}
+    {{#if user.value}}
       <div class="column">
 
         <LinkTo @route="users.user" @model={{user}}>
@@ -14,13 +14,18 @@
               width="60px"
               alt="profile-image"
             />
-            <p>{{user.name}}</p>
+            <p>{{user.name}}
+             || User is achived
+            
+            </p>
           </div>
         </LinkTo>
-
+        
       </div>
-      {{/unless}}
+      {{/if}}
     {{/each}}
 
   </div>
 </div>
+
+{{outlet}}

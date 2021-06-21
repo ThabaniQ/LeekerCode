@@ -19,11 +19,24 @@
         </p>
 
         <p class="subtitle has-text-white my-2">
-          Example Value:
+          User Archived:
           {{@model.value}}
         </p>
+        
+        <LinkTo @route="archived-users">
+        <button class="button mb-2" type="button">
+          Archived users
+        </button>
+      </LinkTo>
 
-        {{!-- Place the component to archive/unarchive users here --}}
+      <button
+          type="button"
+          class="button button--archive is-pulled-right mb-4"
+          
+          {{on "click" this.ChangeArchived}}
+        >
+          Archive
+        </button>
 
       </div>
     </div>

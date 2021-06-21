@@ -11,4 +11,5 @@ Router.map(function () {
     this.route('user', { path: '/:user_id' });
     this.route('index', { path: '/' });
   });
+  this.route('archived-users');
 });
